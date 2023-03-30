@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.522);
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 20px;
+    padding:12px 20px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+header{
+    height:400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:400px;
+    grid-template-areas:
+    "texte image"
+    ;
+}
+.header-left{
+    grid-area:texte;
+    place-self: center;
+    margin:0 10%
+}
+.header-left h1{
+    font-weight:100;
+    padding: 10px;
+}
+.header-left p{
+    line-height: 1.6rem;
+    padding: 10px;
+}
+.header-left a{
+    position:relative;
+    top: 10px;
+}
+.header-right{
+    background: url(./img/banner.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area:image;
+}
+.header-right img{
+    display: none;
+}
+
+.section1{
+    border: 1px solid rgba(128, 128, 128, 0.478);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 300px;
+    grid-template-areas:
+    "image texte"
+    ;
+}
+.section1 img{
+width: 100%;
+height: 100%;
+grid-area: image;
+}
+.sous-section1-right{
+    grid-area: texte;
+    place-self: center;
+    margin:0 10%
+}
+.sous-section1-right h2{
+    font-weight:100;
+    padding: 10px;
+}
+.sous-section1-right p{
+    line-height: 1.6rem;
+    padding: 10px;
+}
+.sous-section1-right a {
+    position:relative;
+    top: 10px;
+}
+.section2{
+    border: 1px solid rgba(128, 128, 128, 0.478);
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 300px;
+    grid-template-areas:
+    "image texte"
+    ;
+}
+.sous-section2-left{
+    place-self: center;
+    margin:0 10%
+}
+.sous-section2-left h2{
+    font-weight:100;
+    padding: 10px;
+}
+.sous-section2-left p{
+    line-height: 1.6rem;
+    padding: 10px;
+}
+.sous-section2-left a{
+    position:relative;
+    top: 10px;
+}
+.img3{
+    height: 100%;
+    width: 100%;
+}
+
+.section3{
+    border: 1 px solid black;
+    height: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+.section3 h2{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formulaire{
+    height: 370px;
+    width: 60%;
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:50px 50px 70px 150px 50px ;
+    gap: 10px;
+    grid-template-areas:
+    "name email"
+    "input1 input2"
+    "message message"
+    "input3 input3"
+    "submit submit"
+    ;
+}
+.label-name{
+    grid-area:name;
+    place-self: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+.label-email{
+    grid-area:email;
+    place-self: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+.input-name{
+    grid-area: input1;
+    border: 1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 20px;
+}
+.input-email{
+    grid-area: input2;
+    border: 1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 20px;
+}
+.label-message{
+    grid-area: message;
+    place-self: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+.input-message{
+    grid-area: input3;
+    border: 1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 20px;
+}
+.button-submit{
+    grid-area: submit;
+    text-decoration: none;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.522);
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 20px;
+    padding:12px 20px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    width: 300px;
+    place-self: center;
+}
+footer{
+    border-top: 1px solid rgba(128, 128, 128, 0.666);
+    height:100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* margin-bottom:50px; */
+}
+footer a{
+    padding: 10px;
+    border:1px solid rgba(128, 128, 128, 0.666);
+    border-radius: 50%;
+    margin: 0 30px;
+}
+
+@media screen and (max-width:800px){
+  header{
+    height: 500px;
+    width: 100%;
+    display: block;
+  }
+  .header-left{
+    width: 100%;
+    height: 200px;  
+  }
+  .header-left p{
+    line-height: 1.6rem;
+    padding: 10px;
+    width: 80%;
+}
+.header-right img{
+    display: block;
+    height: 300px;
+    width: 100%;
+}
+.section1{
+    display: block;
+    height:200px;
+}
+.section1 img{
+    display: none;
+}
+.section2{
+    display: block;
+    height: 200px;
+}
+.section2 img{
+    display: none;
+}
+.section3{
+    
+}
+}
